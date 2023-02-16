@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(RoleRestController.ROLE_REST_URL)
 public class RoleRestController extends CRUDRestController<Role, Long>{
 
-    public static final String ROLE_REST_URL = "role";;
+    public static final String ROLE_REST_URL = "role";
 
     private final RoleService roleService;
 
