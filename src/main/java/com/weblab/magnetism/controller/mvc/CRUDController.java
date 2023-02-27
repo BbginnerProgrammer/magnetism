@@ -12,8 +12,10 @@ public abstract class CRUDController<E, K> {
 
     @GetMapping("/list")
     public String showList() {
+
         return getEntityName() + "/list";
     }
+
 
     @GetMapping("/read/{id}")
     public String showRead(@PathVariable String id, Model model) {
@@ -24,10 +26,11 @@ public abstract class CRUDController<E, K> {
 
     @GetMapping("/create")
     public String showCreate() {
-        return getEntityName() + "/createe";
+
+        return getEntityName() + "/create";
     }
 
-    @GetMapping("/update{id}")
+    @GetMapping("/update/{id}")
     public String showUpdate(@PathVariable String id, Model model) {
 
         model.addAttribute("id", id);
